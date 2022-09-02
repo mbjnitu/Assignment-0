@@ -1,2 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+static void main(string[] args) {
+}
+public class HelloWorld {
+    public String run() {
+        return "Hello, World!";
+    }
+}
+

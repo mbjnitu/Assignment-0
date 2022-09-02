@@ -6,15 +6,12 @@ public class ProgramTests
     public void Main_when_run_prints_Hello_World()
     {
         // Arrange
-        using var writer = new StringWriter();
-        Console.SetOut(writer);
+        var sut = new HelloWorld();
 
-         // Act
-        var program = Assembly.Load(nameof(HelloWorld));
-        program.EntryPoint?.Invoke(null, new[] { Array.Empty<string>() });
+        // Act
+        var result = sut.run();
 
         // Assert
-        var output = writer.GetStringBuilder().ToString().TrimEnd();
-        output.Should().Be("Hello, World!");
+        result.Should().Be("Hello, World!");
     }
 }
