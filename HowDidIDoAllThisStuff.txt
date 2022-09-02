@@ -34,6 +34,7 @@ dotnet run      //Use d"otnet run --project Application"
 dotnet test     //From /Application run 
                     "dotnet add package FluentAssertions"
                     "dotnet add package xunit"
+                    "dotnet add package xunit.runner.visualstudio"
 
 12. Commit your code and create pull request
 

@@ -1,6 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿public class Program {
 
-static void main(string[] args) {
+static void Main(string[] args) {
     var hw = new HelloWorld();
 }
 public class HelloWorld {
@@ -8,4 +8,4 @@ public class HelloWorld {
         return "Hello, World!";
     }
 }
-
+}

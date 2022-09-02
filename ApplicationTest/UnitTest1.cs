@@ -6,7 +6,7 @@ public class ProgramTests
     public void Main_when_run_prints_Hello_World()
     {
         // Arrange
-        var hw = new HelloWorld();
+        var hw = new Program.HelloWorld();
 
         // Act
         var result = hw.run();
