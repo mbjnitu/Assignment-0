@@ -1,0 +1,32 @@
+1. Create a new public repository on GitHub with README, .gitignore, and license.
+
+2. Clone repository to your local machine
+
+3. Create a solution file and add a GitHub action to validate builds
+#  From cmd i ran "dotnet new sln -o Assignment-0"
+#  Copy ci.yaml from lecture-code.yaml (this generated the workflow on github)
+
+4. Push changes
+
+5. Configure branch protection and squash merging on GitHub.
+#  From settings on github.com, in the branches tab.
+
+6. Checkout new branch
+
+7. Create a C# console application project
+#  https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-console?view=vs-2022
+
+8. Create an xunit test library project
+
+9. Reference the console app from the test library
+
+10. Create a solution file and add the two projects
+
+11. Make sure everything runs using:
+dotnet build
+dotnet run
+dotnet test
+
+12. Commit your code and create pull request
+
+13. Merge changes
