@@ -6,10 +6,10 @@ public class ProgramTests
     public void Main_when_run_prints_Hello_World()
     {
         // Arrange
-        var sut = new HelloWorld();
+        var hw = new HelloWorld();
 
         // Act
-        var result = sut.run();
+        var result = hw.run();
 
         // Assert
         result.Should().Be("Hello, World!");
