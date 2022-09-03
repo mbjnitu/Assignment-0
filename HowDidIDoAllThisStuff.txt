@@ -14,18 +14,27 @@
 6. Checkout new branch
 
 7. Create a C# console application project
-#  https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-console?view=vs-2022
+#  from cmd: "dotnet new console -o "Application""
 
 8. Create an xunit test library project
+#  from cmd: "dotnet new mstest -o "ApplicationTest""
 
 9. Reference the console app from the test library
+#  from cmd: "dotnet add ApplicationTest/ApplicationTest.csproj reference Application/Application.csproj"
 
 10. Create a solution file and add the two projects
+#   all from cmd:
+        dotnet new sln -o Assignment-0      //Move this file out of the folder its created in, so its in the same dir-level as README or gitignore.
+        dotnet sln Assignment-0.sln add Application/Application.csproj
+        dotnet sln Assignment-0.sln add ApplicationTest/ApplicationTest.csproj
 
 11. Make sure everything runs using:
-dotnet build
-dotnet run
-dotnet test
+dotnet build    //Works
+dotnet run      //Use d"otnet run --project Application"
+dotnet test     //From /Application run 
+                    "dotnet add package FluentAssertions"
+                    "dotnet add package xunit"
+                    "dotnet add package xunit.runner.visualstudio"
 
 12. Commit your code and create pull request
 
