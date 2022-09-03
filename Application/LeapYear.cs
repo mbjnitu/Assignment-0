@@ -1,6 +1,20 @@
 public class LeapYear {
-    public bool IsLeapYear(int year) {
+    public bool IsLeapYear(string year) {
+        try {
+            var arg = int.Parse(year);
+            return CalcIfLeapYear(arg);
+        }
+        catch (FormatException) {
+            return false;
+        }
+    }
 
+    public bool IsLeapYear(int year) {
+        return CalcIfLeapYear(year);
+    }
+
+    private bool CalcIfLeapYear(int year) {
+        if (year < 1582) return false;
         return IsDivBy4(year) && !IsDivBy100(year) || IsDivBy400(year);
     }
 

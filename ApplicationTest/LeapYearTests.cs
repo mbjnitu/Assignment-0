@@ -83,4 +83,42 @@ public class LeapYearTests
         result5.Should().Be(false);
         result6.Should().Be(false);
     }
+
+    [Fact]
+    public void NonIntConvertableShouldReturnFalse()
+    {
+        // Arrange
+        var ly = new LeapYear();
+
+        // Act
+        var result1 = ly.IsLeapYear("hello");
+        var result2 = ly.IsLeapYear("2000");
+
+        // Assert
+        result1.Should().Be(false);
+        result2.Should().Be(true);
+    }
+
+    [Fact]
+    public void AllYearsBefore1582ShouldReturnFalse()
+    {
+        // Arrange
+        var ly = new LeapYear();
+
+        // Act
+        var result1 = ly.IsLeapYear("32");
+        var result2 = ly.IsLeapYear(32);
+        var result3 = ly.IsLeapYear("1504");
+        var result4 = ly.IsLeapYear(1504);
+        var result5 = ly.IsLeapYear("800");
+        var result6 = ly.IsLeapYear(800);
+
+        // Assert
+        result1.Should().Be(false);
+        result2.Should().Be(false);
+        result3.Should().Be(false);
+        result4.Should().Be(false);
+        result5.Should().Be(false);
+        result6.Should().Be(false);
+    }
 }
