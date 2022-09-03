@@ -20,7 +20,7 @@ public class LeapYearTests
         result3.Should().Be(true);
         result4.Should().Be(true);
     }
-    
+
     [Fact]
     public void CheckNumberDivisibleBy100()
     {
@@ -37,6 +37,25 @@ public class LeapYearTests
         result1.Should().Be(false);
         result2.Should().Be(true);
         result3.Should().Be(true);
+        result4.Should().Be(false);
+    }
+
+    [Fact]
+    public void CheckNumberDivisibleBy400()
+    {
+        // Arrange
+        var ly = new LeapYear();
+
+        // Act
+        var result1 = ly.IsDivBy400(400);
+        var result2 = ly.IsDivBy400(302400);
+        var result3 = ly.IsDivBy400(300);
+        var result4 = ly.IsDivBy400(1000);
+
+        // Assert
+        result1.Should().Be(true);
+        result2.Should().Be(true);
+        result3.Should().Be(false);
         result4.Should().Be(false);
     }
 }

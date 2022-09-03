@@ -13,6 +13,6 @@ public class LeapYear {
     }
 
     public bool IsDivBy400(int num) {
-        return false;
+        return num % 400 == 0;
     }
 }
