@@ -58,4 +58,29 @@ public class LeapYearTests
         result3.Should().Be(false);
         result4.Should().Be(false);
     }
+
+    [Fact] // Test is based on "https://www.calendar.best/leap-years.html"
+    public void CheckIfNumberIsALeapYear()
+    {
+        // Arrange
+        var ly = new LeapYear();
+
+        // Act
+        var result1 = ly.IsLeapYear(1904);
+        var result2 = ly.IsLeapYear(2976);
+        var result3 = ly.IsLeapYear(2780);
+        
+        var result4 = ly.IsLeapYear(1900);
+        var result5 = ly.IsLeapYear(2600);
+        var result6 = ly.IsLeapYear(3000);
+
+        // Assert
+        result1.Should().Be(true);
+        result2.Should().Be(true);
+        result3.Should().Be(true);
+
+        result4.Should().Be(false);
+        result5.Should().Be(false);
+        result6.Should().Be(false);
+    }
 }
